@@ -11,3 +11,5 @@
 - Export the model and deploy to AI @ Edge device and test
 
 ## Architecture
+
+![alt text](https://github.com/balakreshnan/csitestbedai/blob/main/images/testbedAI.jpg "Service Health")
