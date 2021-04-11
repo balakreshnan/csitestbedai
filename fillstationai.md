@@ -4,7 +4,9 @@
 
 - Ability to use Vision based AI to detect fill color to detect quality of the product
 - For Base class we have 3 colors
-- Red, Blue and Yellow
+    - Red
+    - Blue
+    - Yellow
 - Goal is for students to build various color combination and build model
 - Also in real world gives the ability to create new model and deploy faster in manufacturing floor
 - Also allows the model creation to understand the environment where it predicts
