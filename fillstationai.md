@@ -6,9 +6,12 @@
 - For Base class we have 3 colors
 - Red, Blue and Yellow
 - Goal is for students to build various color combination and build model
+- Also in real world gives the ability to create new model and deploy faster in manufacturing floor
+- Also allows the model creation to understand the environment where it predicts
 - Take pictures using cell phone
 - Use Azure cognitive custom vision to tag the image and build model in 1 hour
 - Export the model and deploy to AI @ Edge device and test
+- We use transfer learning with 25 to 100 images for each object or classes
 
 ## Architecture
 
@@ -27,6 +30,8 @@
 
 ## Steps
 
+- From the phone download the pictures
+- Download the photos to local laptop
 - Images are uploaded in the images directory in this repo
 - Images are zipped
 - I am using sample1.zip
