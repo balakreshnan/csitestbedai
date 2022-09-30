@@ -39,8 +39,6 @@ PROB_THRESHOLD = 0.40  # Minimum probably to show results.
 
 print(" Onnx Runtime : " + onnxruntime.get_device())
 
-#labels = ['ballfail','ballinendzone','flaphit','SteelBall','zone1','zone2']
-# labels = ['ballfail','ballinendzone','ballinplunge','flaphit','SteelBall','zone1','zone2']
 labels = ['Blue','Red','Yellow']
 
 
@@ -139,11 +137,8 @@ movingup = 0
 movingdown = 0
 distance = 0
 
-#vid = cv2.VideoCapture('C:\\Users\\xxxx\\Downloads\\WIN_20220920_11_27_37_Pro.mp4')
 vid = cv2.VideoCapture(0)
 vid.set(cv2.CAP_PROP_FPS,90)
-#ret = vid.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
-#ret = vid.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
 print('FPS ',vid.get(cv2.CAP_PROP_FPS))
 print('Width ',vid.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -166,10 +161,6 @@ mask = np.zeros_like(frame)
 frame_size = (960, 540)
 # Initialize video writer object
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-# fourcc = cv2.VideoWriter_fourcc('M', 'J', 'P', 'G')
-# fourcc = cv2.VideoWriter_fourcc(*'XVID')
-# fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
-# output = cv2.VideoWriter('C:\\Users\\xxxx\\Downloads\\output_video_from_file.mp4', fourcc, 60, frame_size, 1)
 output = cv2.VideoWriter('C:\\Users\\xxxx\\Downloads\\output1.mp4',cv2.VideoWriter_fourcc(*'mp4v'), 20, frame_size)
   
 while(True):
@@ -245,12 +236,6 @@ while(True):
                         # Resize image
                         # output.write(imS)
                         cv2.imshow("output", imS)
-                        # print(' out')
-                        # Obtain frame size information using get() method
-                        # frame_width = int(vid.get(3))
-                        # frame_height = int(vid.get(4))
-                        # frame_size = (frame_width,frame_height)
-                        # fps = 20
                         print ('Distance: ', distance, 'Moving Right: ', movingright, 'Moving Left: ', movingleft, 'Moving Up: ', movingup, 'Moving Down: ', movingdown)         
 
     print(" Time taken = " + str(time.process_time() - start))
